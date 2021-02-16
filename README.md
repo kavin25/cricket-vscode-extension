@@ -19,3 +19,7 @@ None Yet!
 ### 1.0.0
 
 Initial Release of **Cricket**
+
+### 1.1.0
+
+Added Logo
