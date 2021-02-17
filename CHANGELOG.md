@@ -5,6 +5,10 @@ All notable changes to the "cricket" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file. -->
 
+## [1.3.2]
+
+- Change Extension Description
+
 ## [1.3.1]
 
 - Convert HTML Special Chars to normal text

@@ -43,3 +43,7 @@ Added Latest News Feature
 ## 1.3.1
 
 Convert HTML Special Chars to normal text
+
+## 1.3.2
+
+Change Extension Description
