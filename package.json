@@ -5,7 +5,7 @@
   "icon": "images/favicon.png",
   "publisher": "KavinDesiValli",
   "author": "Kavin Desi Valli <kavinvalli@gmail.com> (https://kavin.me)",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "homepage": "https://github.com/kavin25/cricket-vscode-extension#readme",
   "engines": {
     "vscode": "^1.53.0"
