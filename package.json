@@ -22,6 +22,7 @@
     "Other"
   ],
   "activationEvents": [
+    "*",
     "onCommand:cricket.liveScores",
     "onCommand:cricket.latestNews"
   ],

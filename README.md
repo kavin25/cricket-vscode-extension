@@ -17,8 +17,7 @@ This is a VSCode extension which allows you to checkout cricket scores live, fro
 
 ## Known Issues
 
-1. Status Bar Item does not show unless extension's run once before in active session<br />
-   [See Issue](https://github.com/kavin25/cricket-vscode-extension/issues/1)
+None
 
 > Add Issues to the Github Issues to add any issue if you find any
 
@@ -47,3 +46,8 @@ Convert HTML Special Chars to normal text
 ## 1.3.2
 
 Change Extension Description
+
+## 1.3.3
+
+- Solved Issue #1 (Status Bar Item does not show unless extension's run once before in active session)<br />
+  [See Issue](https://github.com/kavin25/cricket-vscode-extension/issues/1)
