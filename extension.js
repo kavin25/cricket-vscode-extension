@@ -12,6 +12,14 @@ const xmlParser = require("fast-xml-parser");
  */
 function activate(context) {
   console.log('Congratulations, your extension "cricket" is now active!');
+  const statusBarItem = vscode.window.createStatusBarItem(
+    vscode.StatusBarAlignment.Right,
+    100
+  );
+  console.log(statusBarItem);
+  statusBarItem.text = "Cricket Live Score";
+  statusBarItem.command = "cricket.liveScores";
+  statusBarItem.show();
 
   let disposable = vscode.commands.registerCommand(
     "cricket.liveScores",
@@ -45,7 +53,7 @@ function activate(context) {
       );
     }
   );
-
+  context.subscriptions.push(statusBarItem);
   context.subscriptions.push(disposable);
 }
 exports.activate = activate;
