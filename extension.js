@@ -53,8 +53,46 @@ function activate(context) {
       );
     }
   );
+
+  let disposableTwo = vscode.commands.registerCommand(
+    "cricket.latestNews",
+    function () {
+      vscode.window.withProgress(
+        {
+          location: vscode.ProgressLocation.Notification,
+          title: "Fetching News...",
+          cancellable: true,
+        },
+        async (progress, token) => {
+          progress.report({ increment: 0 });
+          const res = await axios.get(
+            "https://www.espncricinfo.com/rss/content/story/feeds/0.xml"
+          );
+          const newss = xmlParser
+            .parse(res.data)
+            .rss.channel.item.map((news) => ({
+              label: news.title,
+              detail: news.description,
+              link: news.guid,
+            }));
+          progress.report({ increment: 100 });
+          const news = await vscode.window.showQuickPick(newss, {
+            matchOnDetail: true,
+          });
+          if (news === null) return;
+          vscode.env.openExternal(news.link);
+          token.onCancellationRequested(() => {
+            console.log("User canceled the long running operation");
+            return;
+          });
+        }
+      );
+    }
+  );
+
   context.subscriptions.push(statusBarItem);
   context.subscriptions.push(disposable);
+  context.subscriptions.push(disposableTwo);
 }
 exports.activate = activate;
 

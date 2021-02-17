@@ -22,7 +22,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:cricket.liveScores"
+    "onCommand:cricket.liveScores",
+    "onCommand:cricket.latestNews"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -31,6 +32,11 @@
         "command": "cricket.liveScores",
         "category": "Cricket",
         "title": "Live Scores"
+      },
+      {
+        "command": "cricket.latestNews",
+        "category": "Cricket",
+        "title": "Latest Cricket News"
       }
     ]
   },
