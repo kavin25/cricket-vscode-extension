@@ -5,6 +5,11 @@ All notable changes to the "cricket" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file. -->
 
+## [1.4.0]
+
+- Changed status bar item to "Cricket Extension"
+- Can run both commands with status bar item
+
 ## [1.3.3]
 
 - Solved Issue #1 (Status Bar Item does not show unless extension's run once before in active session)

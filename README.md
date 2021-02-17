@@ -4,16 +4,11 @@ This is a VSCode extension which allows you to checkout cricket scores live, fro
 
 ## Features
 
+Click on `Cricket Extension` button on bottom status bar
+
 - Live Scores
-
-  1. Run `Cmd-Shift-P` on a Mac or `Ctrl-Shift-P` on Windows/Linux and type `Cricket: Live Scores` and press Enter
-     - Click on any match and you'll be prompted by VSCode to allow URL to be browsed. Click Yes
-  2. Click on `Cricket Live Score` button at the bottom status bar to run extension and then continue
-     - Click on any match and you'll be prompted by VSCode to allow URL to be browsed. Click Yes
-
-- Latest News
-  - Run `Cmd-Shift-P` on a Mac or `Ctrl-Shift-P` on Windows/Linux and type `Cricket: Latest News` and press Enter
-  - Click on any match and you'll be prompted by VSCode to allow URL to be browsed. Click Yes
+  1. Choose `Live Scores` to display live scores
+  2. Choose `Latest News` to display latest news
 
 ## Known Issues
 
@@ -49,5 +44,10 @@ Change Extension Description
 
 ## 1.3.3
 
-- Solved Issue #1 (Status Bar Item does not show unless extension's run once before in active session)<br />
-  [See Issue](https://github.com/kavin25/cricket-vscode-extension/issues/1)
+Solved Issue #1 (Status Bar Item does not show unless extension's run once before in active session)<br />
+[See Issue](https://github.com/kavin25/cricket-vscode-extension/issues/1)
+
+## 1.4.0
+
+- Changed status bar item to "Cricket Extension"
+- Can run both commands with status bar item

@@ -19,9 +19,29 @@ function activate(context) {
     100
   );
   console.log(statusBarItem);
-  statusBarItem.text = "Cricket Live Score";
-  statusBarItem.command = "cricket.liveScores";
+  statusBarItem.text = "Cricket Extension";
+  statusBarItem.command = "cricket.askQuestion";
   statusBarItem.show();
+
+  let askQuestion = vscode.commands.registerCommand(
+    "cricket.askQuestion",
+    async function () {
+      const items = [
+        {
+          label: "Live Scores",
+          detail: "Display live cricket scores",
+          command: "cricket.liveScores",
+        },
+        {
+          label: "Latest News",
+          detail: "Display latest cricket news",
+          command: "cricket.latestNews",
+        },
+      ];
+      const response = await vscode.window.showQuickPick(items);
+      vscode.commands.executeCommand(response.command);
+    }
+  );
 
   let disposable = vscode.commands.registerCommand(
     "cricket.liveScores",
