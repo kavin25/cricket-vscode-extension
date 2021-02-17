@@ -3,6 +3,7 @@
 const vscode = require("vscode");
 const axios = require("axios");
 const xmlParser = require("fast-xml-parser");
+const Encoder = require("html-encoder-decoder");
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -11,6 +12,7 @@ const xmlParser = require("fast-xml-parser");
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
+  console.log(decodeHtmlCharCodes("&quot;"));
   console.log('Congratulations, your extension "cricket" is now active!');
   const statusBarItem = vscode.window.createStatusBarItem(
     vscode.StatusBarAlignment.Right,
@@ -38,7 +40,7 @@ function activate(context) {
           const scores = xmlParser
             .parse(res.data)
             .rss.channel.item.map((score) => ({
-              label: score.title,
+              label: decodeHtmlCharCodes(score.title),
               link: score.guid,
             }));
           progress.report({ increment: 100 });
@@ -71,8 +73,8 @@ function activate(context) {
           const newss = xmlParser
             .parse(res.data)
             .rss.channel.item.map((news) => ({
-              label: news.title,
-              detail: news.description,
+              label: decodeHtmlCharCodes(news.title),
+              detail: decodeHtmlCharCodes(news.description),
               link: news.guid,
             }));
           progress.report({ increment: 100 });
@@ -98,6 +100,10 @@ exports.activate = activate;
 
 // this method is called when your extension is deactivated
 function deactivate() {}
+
+function decodeHtmlCharCodes(str) {
+  return Encoder.decode(str);
+}
 
 module.exports = {
   activate,

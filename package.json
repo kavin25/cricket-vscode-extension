@@ -59,6 +59,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "fast-xml-parser": "^3.18.0"
+    "fast-xml-parser": "^3.18.0",
+    "html-encoder-decoder": "^1.3.9"
   }
 }

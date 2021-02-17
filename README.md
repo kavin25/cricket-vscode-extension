@@ -38,3 +38,7 @@ Added Status Bar Item at the Bottom to run extension
 ## 1.3.0
 
 Added Latest News Feature
+
+## 1.3.1
+
+Convert HTML Special Chars to normal text
